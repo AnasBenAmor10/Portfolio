@@ -1138,6 +1138,14 @@ section {
     .main-title h2 .bg-text {
         font-size: 4rem;
     }
+    .contact-content-con .left-contact .contact-icon {
+            display: flex;
+            margin-top: 2rem;
+            justify-content: center;
+    }
+    .contact-content-con .left-contact .contact-info .contact-item {
+        display: block;
+    }
 }
 
 /* Media Query for Mobile Devices with max-width 375px */
