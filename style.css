@@ -206,6 +206,7 @@ section {
     padding-right: 18rem;
 }
 
+
 .header-content .right-header .name {
     font-size: 3rem;
 }
@@ -759,7 +760,7 @@ section {
 /*Independed components*/
 .btn-con {
     display: flex;
-    align-self: flex-start;
+
 }
 
 .main-btn {
@@ -853,6 +854,13 @@ section {
     .header-content {
         grid-template-columns: repeat(1, 1fr);
         padding-bottom: 6rem;
+    }
+    .header-content .right-header {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-right: 18rem;
     }
 
     .left-header .h-shape {
@@ -1104,7 +1112,7 @@ section {
 
 @media screen and (max-width: 700px) {
     .container {
-        padding: 7rem 3rem;
+        padding: 5rem 3rem 10rem !important;
     }
 
     .about-stats .progress-bars {
