@@ -393,6 +393,19 @@ section {
     padding: 1rem 0px;
     font-size: 1rem;
 }
+@media screen and (max-width: 600px) {
+    .container-skill {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            grid-gap: 1rem;
+            padding: 1rem 0px;
+            font-size: 1rem;
+    }
+    
+}
 .skill-box{
     padding: 1rem;
     color: #ddd;
