@@ -384,6 +384,7 @@ section {
     transform: translateX(-50%);
 }
 /* Skills */
+
 .container-skill{
     display: grid;
     grid-template-columns: repeat(4,1fr);
