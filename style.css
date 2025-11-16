@@ -2039,3 +2039,32 @@ section {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
+        /* Mobile Touch Support - Add this to your existing CSS */
+@media screen and (max-width: 768px) {
+    /* Remove hover transform on mobile */
+    .portfolio-item:hover {
+        transform: none;
+    }
+    
+    /* Make hover items visible on click with toggle class */
+    .portfolio-item.active .hover-items {
+        opacity: 1;
+        transform: scale(1) rotateY(0deg);
+    }
+    
+    /* Prevent image zoom on mobile */
+    .portfolio-item.active img {
+        transform: scale(1);
+    }
+    
+    /* Keep original hover effect hidden until click */
+    .portfolio-item .hover-items {
+        opacity: 0;
+        transform: scale(0.8) rotateY(180deg);
+        pointer-events: none;
+    }
+    
+    .portfolio-item.active .hover-items {
+        pointer-events: auto;
+    }
+}
