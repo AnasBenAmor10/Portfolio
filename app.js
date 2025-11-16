@@ -28,3 +28,4 @@ function toggleReadMore() {
         btn.classList.remove('expanded');
     }
 }
+
