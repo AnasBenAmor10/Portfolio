@@ -219,8 +219,186 @@ section {
     margin: 1.5rem 0;
     line-height: 2rem;
 }
+/* About Section - Optimized */
+.about-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
 
-/*About*/
+.left-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left-about h4 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: var(--color-white);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+/* Text Container with Read More */
+.text-container {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.about-text {
+    line-height: 1.8rem;
+    color: var(--color-grey-1);
+    font-size: 1rem;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.about-text.collapsed {
+    max-height: 120px;
+    position: relative;
+}
+
+.about-text.collapsed::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: linear-gradient(transparent, var(--color-primary));
+}
+
+.about-text.expanded {
+    max-height: 1000px;
+}
+
+.read-more-btn {
+    background: none;
+    border: none;
+    color: var(--color-secondary);
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0.5rem 0;
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+    color: var(--color-white);
+    gap: 0.8rem;
+}
+
+.read-more-btn i {
+    transition: transform 0.3s ease;
+}
+
+.read-more-btn.expanded i {
+    transform: rotate(180deg);
+}
+
+
+.btn-text {
+    font-size: 1rem;
+}
+
+.btn-icon {
+    display: flex;
+    align-items: center;
+}
+
+/* Right About - Stats */
+.right-about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    align-content: center;
+}
+
+.about-item {
+    border: 1px solid var(--color-grey-5);
+    border-radius: 10px;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
+    background: var(--color-grey-6);
+}
+
+.about-item:hover {
+    cursor: default;
+    transform: translateY(-5px);
+    border: 1px solid var(--color-secondary);
+    box-shadow: 1px 4px 15px rgba(0, 0, 0, 0.32);
+}
+
+.about-item .abt-text {
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-item .abt-text .large-text {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.about-item .abt-text .small-text {
+    padding-left: 3rem;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    color: var(--color-grey-1);
+    letter-spacing: 1px;
+    line-height: 1.5rem;
+}
+
+.about-item .abt-text .small-text::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 12px;
+    width: 2rem;
+    height: 2px;
+    background-color: var(--color-secondary);
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .right-about {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-text.collapsed {
+        max-height: 100px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .right-about {
+        grid-template-columns: 1fr;
+    }
+
+    .about-item .abt-text .large-text {
+        font-size: 2.5rem;
+    }
+
+    .about-item .abt-text .small-text {
+        font-size: 1rem;
+    }
+}
+/* About old code
 .about-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -292,7 +470,8 @@ section {
 .about-container .left-about h4 {
     font-size: 2rem;
     text-transform: uppercase;
-}
+} */
+
 .about-stats {
     padding-bottom: 4rem;
 }
