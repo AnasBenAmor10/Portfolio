@@ -56,7 +56,8 @@ const projects = [
     summary: "An end-of-study project exploring agentic automation for migration, transformation, and analytics preparation.",
     overview: "This project focuses on automating the migration of data workloads from Oracle to Snowflake. A multi-agent approach supports migration tasks, generates transformation logic, and prepares transformed data for analytics.",
     workflow: ["Analyze Oracle source structures and migration requirements.", "Coordinate multiple agents across migration tasks.", "Generate Snowflake-oriented data transformation logic.", "Prepare transformed outputs for analytics use."],
-    stack: ["Oracle", "Snowflake", "Multi-agent AI", "Data transformation", "Analytics"]
+    stack: ["Oracle", "Snowflake", "Multi-agent AI", "Data transformation", "Analytics"],
+    source: "Project summary based on the CV and project description."
   },
   {
     id: "ambulance-sync", category: "ai", type: "GENAI / HEALTHCARE", title: "Ambulance ER Pre-arrival Sync",
@@ -147,8 +148,7 @@ const projectFields = {
   workflow: document.querySelector("#doc-workflow"),
   stack: document.querySelector("#doc-stack"),
   repository: document.querySelector("#doc-repository"),
-  source: document.querySelector("#doc-source"),
-  footer: document.querySelector(".doc-footer")
+  source: document.querySelector("#doc-source")
 };
 
 const makeText = (tagName, className, text) => {
@@ -210,8 +210,11 @@ filterButtons.forEach((button) => {
   });
 });
 
-const openProject = (projectId) => {
-  const index = projects.findIndex((project) => project.id === projectId);
+projectDirectory.addEventListener("click", (event) => {
+  const button = event.target.closest("[data-open-project]");
+  if (!button) return;
+
+  const index = projects.findIndex((project) => project.id === button.dataset.openProject);
   const project = projects[index];
   if (!project) return;
 
@@ -236,24 +239,8 @@ const openProject = (projectId) => {
   projectFields.stack.replaceChildren(...project.stack.map((technology) => makeText("span", "", technology)));
   projectFields.repository.hidden = !project.repository;
   if (project.repository) projectFields.repository.href = project.repository;
-  projectFields.footer.hidden = !project.repository && !project.source;
   projectFields.source.textContent = project.source || "Source code and project README";
   projectDialog.showModal();
-};
-
-projectDirectory.addEventListener("click", (event) => {
-  const button = event.target.closest("[data-open-project]");
-  if (button) openProject(button.dataset.openProject);
-});
-
-const skillList = document.querySelector(".toolkit-list");
-skillList.addEventListener("click", (event) => {
-  const proof = event.target.closest("[data-project]");
-  if (proof) openProject(proof.dataset.project);
-});
-skillList.querySelectorAll(".skill-group").forEach((group) => {
-  const total = group.querySelectorAll(".skill-tools .chip").length;
-  group.querySelector(".skill-count").textContent = `${total} tools`;
 });
 
 document.querySelector(".doc-close").addEventListener("click", () => projectDialog.close());
