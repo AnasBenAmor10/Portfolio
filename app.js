@@ -210,11 +210,8 @@ filterButtons.forEach((button) => {
   });
 });
 
-projectDirectory.addEventListener("click", (event) => {
-  const button = event.target.closest("[data-open-project]");
-  if (!button) return;
-
-  const index = projects.findIndex((project) => project.id === button.dataset.openProject);
+const openProject = (projectId) => {
+  const index = projects.findIndex((project) => project.id === projectId);
   const project = projects[index];
   if (!project) return;
 
@@ -242,6 +239,21 @@ projectDirectory.addEventListener("click", (event) => {
   projectFields.footer.hidden = !project.repository && !project.source;
   projectFields.source.textContent = project.source || "Source code and project README";
   projectDialog.showModal();
+};
+
+projectDirectory.addEventListener("click", (event) => {
+  const button = event.target.closest("[data-open-project]");
+  if (button) openProject(button.dataset.openProject);
+});
+
+const skillList = document.querySelector(".toolkit-list");
+skillList.addEventListener("click", (event) => {
+  const proof = event.target.closest("[data-project]");
+  if (proof) openProject(proof.dataset.project);
+});
+skillList.querySelectorAll(".skill-group").forEach((group) => {
+  const total = group.querySelectorAll(".skill-tools .chip").length;
+  group.querySelector(".skill-count").textContent = `${total} tools`;
 });
 
 document.querySelector(".doc-close").addEventListener("click", () => projectDialog.close());

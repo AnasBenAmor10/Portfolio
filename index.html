@@ -1,375 +1,720 @@
 <!doctype html>
 <html lang="en" data-theme="dark">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#111915" />
-    <meta name="description" content="Anas Ben Amor is a Data and GenAI Engineer building dependable data platforms and useful AI applications." />
-    <title>Anas Ben Amor | Data &amp; GenAI Engineer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="app.js" defer></script>
-  </head>
-  <body>
-    <div class="scroll-progress" aria-hidden="true"><span></span></div>
-    <header class="site-header">
-      <a class="wordmark" href="#home" aria-label="Anas Ben Amor, home">AB<span>.</span></a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation">
-        <span></span><span></span>
-      </button>
-      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#work">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#credentials">Credentials</a>
-        <a href="#volunteering">Volunteering</a>
-        <a class="nav-contact" href="#contact">Let's talk <span aria-hidden="true">&#8599;</span></a>
-      </nav>
-      <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
-        <span class="theme-symbol" aria-hidden="true"></span><span class="theme-label">Dark mode</span>
-      </button>
-    </header>
 
-    <main>
-      <section class="hero page-wrap" id="home">
-        <div class="hero-copy reveal">
-          <p class="eyebrow"><span class="status-dot"></span> DATA ENGINEERING <span class="eyebrow-separator">/</span> GENERATIVE AI</p>
-          <h1>I make data<br />work harder.<br /><span>And AI work<br class="mobile-break" /> smarter.</span></h1>
-          <p class="hero-intro">I'm Anas Ben Amor, a Data &amp; GenAI Engineer building reliable data foundations and thoughtful AI products that solve real problems.</p>
-          <div class="hero-actions">
-            <a class="button button-dark" href="#work">Explore my work <span aria-hidden="true">&#8595;</span></a>
-            <a class="text-link" href="img/cv/AnasBenAmorCV.pdf" target="_blank" rel="noreferrer">View résumé <span aria-hidden="true">&#8599;</span></a>
-          </div>
-        </div>
-        <div class="hero-visual reveal" aria-label="Portrait of Anas Ben Amor">
-          <div class="portrait-frame">
-            <img src="img/anas.jpg" alt="Anas Ben Amor" />
-            <div class="portrait-caption"><span>ANAS BEN AMOR</span><span>DATA / AI / ENGINEERING</span></div>
-          </div>
-          <div class="visual-index">TUNISIA <span>34.0 N / 9.0 E</span></div>
-        </div>
-        <section class="pipeline-visual reveal" aria-labelledby="pipeline-title">
-          <div class="pipeline-heading">
-            <div><p class="pipeline-kicker">A DATA ENGINEER'S POINT OF VIEW</p><h2 id="pipeline-title">The path from raw data to useful outcomes</h2></div>
-            <span class="pipeline-status"><span></span> FLOW IN MOTION</span>
-          </div>
-          <div class="pipeline-flow">
-            <div class="pipeline-rail" aria-hidden="true"><i class="pipeline-packet packet-one"></i><i class="pipeline-packet packet-two"></i><i class="pipeline-packet packet-three"></i></div>
-            <ol class="pipeline-stages">
-              <li class="pipeline-stage"><span class="stage-node">01</span><strong>Source</strong><span>APIs &amp; databases</span></li>
-              <li class="pipeline-stage"><span class="stage-node">02</span><strong>Ingest</strong><span>Kafka &amp; NiFi</span></li>
-              <li class="pipeline-stage"><span class="stage-node">03</span><strong>Transform</strong><span>Spark &amp; dbt</span></li>
-              <li class="pipeline-stage"><span class="stage-node">04</span><strong>Orchestrate</strong><span>Airflow</span></li>
-              <li class="pipeline-stage"><span class="stage-node">05</span><strong>Deliver</strong><span>Analytics &amp; GenAI</span></li>
-            </ol>
-          </div>
-        </section>
-        <a class="scroll-cue" href="#about"><span></span> SCROLL TO EXPLORE</a>
-      </section>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#111915" />
+  <meta name="description"
+    content="Anas Ben Amor is a Data and GenAI Engineer building dependable data platforms and useful AI applications." />
+  <title>Anas Ben Amor | Data &amp; GenAI Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="app.js" defer></script>
+</head>
 
-      <section class="intro-band" id="about">
-        <div class="page-wrap intro-layout">
-          <p class="eyebrow reveal">A LITTLE ABOUT ME <span class="eyebrow-separator">/</span> 01</p>
-          <div class="intro-content reveal">
-            <h2>Good data is the start.<br /><span>Good decisions are the point.</span></h2>
-            <div class="intro-details">
-              <p>At Talan Tunisia Consulting, I work on data initiatives for GRDF, specializing in cloud data modernization with Snowflake and dbt. My work includes migrating legacy Informatica PowerCenter transformation flows, designing data architectures, building data models, and delivering reliable transformations.</p>
-              <p>I build and adapt reusable Airflow orchestration templates, optimize processing performance, and lead production releases. I also apply GenAI to accelerate delivery, from translating functional requirements into dbt projects to generating orchestration workflows.</p>
-            </div>
-            <div class="quick-facts">
-              <div><span class="fact-number">01</span><span>Data platforms</span></div>
-              <div><span class="fact-number">02</span><span>GenAI applications</span></div>
-              <div><span class="fact-number">03</span><span>Production-minded engineering</span></div>
-            </div>
-          </div>
+<body>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+  <header class="site-header">
+    <a class="wordmark" href="#home" aria-label="Anas Ben Amor, home">AB<span>.</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav"
+      aria-label="Open navigation">
+      <span></span><span></span>
+    </button>
+    <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#work">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#volunteering">Volunteering</a>
+      <a class="nav-contact" href="#contact">Let's talk <span aria-hidden="true">&#8599;</span></a>
+    </nav>
+    <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+      <span class="theme-symbol" aria-hidden="true"></span><span class="theme-label">Dark mode</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero page-wrap" id="home">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="status-dot"></span> DATA ENGINEERING <span class="eyebrow-separator">/</span>
+          GENERATIVE AI</p>
+        <h1>I make data<br />work harder.<br /><span>And AI work<br class="mobile-break" /> smarter.</span></h1>
+        <p class="hero-intro">I'm Anas Ben Amor, a Data &amp; GenAI Engineer building reliable data foundations and
+          thoughtful AI products that solve real problems.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#work">Explore my work <span aria-hidden="true">&#8595;</span></a>
+          <a class="text-link" href="img/cv/AnasBenAmorCV.pdf" target="_blank" rel="noreferrer">View résumé <span
+              aria-hidden="true">&#8599;</span></a>
         </div>
-        <div class="automation-demo page-wrap reveal" aria-labelledby="automation-title">
-          <div class="automation-heading">
-            <div><p class="automation-kicker">GENAI ENGINEERING <span>/</span> ILLUSTRATIVE WORKFLOW</p><h3 id="automation-title">From an idea to reviewed code</h3></div>
-            <span class="automation-status"><i></i> HUMAN IN THE LOOP</span>
+      </div>
+      <div class="hero-visual reveal" aria-label="Portrait of Anas Ben Amor">
+        <div class="portrait-frame">
+          <img src="img/anas.jpg" alt="Anas Ben Amor" />
+          <div class="portrait-caption"><span>ANAS BEN AMOR</span><span>DATA / AI / ENGINEERING</span></div>
+        </div>
+        <div class="visual-index">TUNISIA <span>34.0 N / 9.0 E</span></div>
+      </div>
+      <section class="pipeline-visual reveal" aria-labelledby="pipeline-title">
+        <div class="pipeline-heading">
+          <div>
+            <p class="pipeline-kicker">A DATA ENGINEER'S POINT OF VIEW</p>
+            <h2 id="pipeline-title">The path from raw data to useful outcomes</h2>
           </div>
-          <div class="assistant-flow">
-            <article class="assistant-node assistant-source">
-              <span class="automation-label">01 / DEVELOPER INPUT</span>
-              <strong>Feature or question</strong>
-              <span class="automation-detail">Describe the change</span>
-            </article>
-            <span class="workflow-connector" aria-hidden="true"><i></i></span>
-            <article class="assistant-node assistant-engine">
-              <span class="automation-label">02 / GENAI ASSISTANT</span>
-              <strong>Understand &amp; propose</strong>
-              <span class="automation-detail">Plan a useful approach</span>
-            </article>
-            <span class="workflow-connector" aria-hidden="true"><i></i></span>
-            <article class="assistant-node assistant-output">
-              <span class="automation-label">03 / FIRST DRAFT</span>
-              <strong>Code, tests, docs</strong>
-              <span class="automation-detail">Suggestions ready to inspect</span>
-            </article>
-            <span class="workflow-connector" aria-hidden="true"><i></i></span>
-            <article class="assistant-node assistant-review">
-              <span class="automation-label">04 / ENGINEER REVIEW</span>
-              <strong>Validate &amp; approve</strong>
-              <span class="automation-detail">Human review before release</span>
-            </article>
-          </div>
+          <span class="pipeline-status"><span></span> FLOW IN MOTION</span>
+        </div>
+        <div class="pipeline-flow">
+          <div class="pipeline-rail" aria-hidden="true"><i class="pipeline-packet packet-one"></i><i
+              class="pipeline-packet packet-two"></i><i class="pipeline-packet packet-three"></i></div>
+          <ol class="pipeline-stages">
+            <li class="pipeline-stage"><span class="stage-node">01</span><strong>Source</strong><span>APIs &amp;
+                databases</span></li>
+            <li class="pipeline-stage"><span class="stage-node">02</span><strong>Ingest</strong><span>Kafka &amp;
+                NiFi</span></li>
+            <li class="pipeline-stage"><span class="stage-node">03</span><strong>Transform</strong><span>Spark &amp;
+                dbt</span></li>
+            <li class="pipeline-stage"><span
+                class="stage-node">04</span><strong>Orchestrate</strong><span>Airflow</span></li>
+            <li class="pipeline-stage"><span class="stage-node">05</span><strong>Deliver</strong><span>Analytics &amp;
+                GenAI</span></li>
+          </ol>
         </div>
       </section>
+      <a class="scroll-cue" href="#about"><span></span> SCROLL TO EXPLORE</a>
+    </section>
 
-      <section class="work-section page-wrap" id="work">
-        <div class="section-heading reveal">
-          <div><p class="eyebrow">PROJECT ARCHIVE <span class="eyebrow-separator">/</span> 02</p><h2>Questions behind the builds<span class="heading-period">.</span></h2></div>
-          <a class="text-link" href="https://github.com/AnasBenAmor10" target="_blank" rel="noreferrer">GitHub profile <span aria-hidden="true">&#8599;</span></a>
-        </div>
-        <p class="project-intro reveal">Each project began with a question. Choose one to explore the idea, system flow, and technology behind it.</p>
-        <div class="project-controls reveal" aria-label="Filter projects">
-          <div class="filter-group" role="group" aria-label="Project category">
-            <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All projects</button>
-            <button class="filter-button" type="button" data-filter="ai" aria-pressed="false">AI &amp; GenAI</button>
-            <button class="filter-button" type="button" data-filter="data" aria-pressed="false">Data engineering</button>
+    <section class="intro-band" id="about">
+      <div class="page-wrap intro-layout">
+        <p class="eyebrow reveal">A LITTLE ABOUT ME <span class="eyebrow-separator">/</span> 01</p>
+        <div class="intro-content reveal">
+          <h2>Good data is the start.<br /><span>Good decisions are the point.</span></h2>
+          <div class="intro-details">
+            <p>At Talan Tunisia Consulting, I work on data initiatives for GRDF, specializing in cloud data
+              modernization with Snowflake and dbt. My work includes migrating legacy Informatica PowerCenter
+              transformation flows, designing data architectures, building data models, and delivering reliable
+              transformations.</p>
+            <p>I build and adapt reusable Airflow orchestration templates, optimize processing performance, and lead
+              production releases. I also apply GenAI to accelerate delivery, from translating functional requirements
+              into dbt projects to generating orchestration workflows.</p>
           </div>
-          <p class="project-count" aria-live="polite">Showing <span>8</span> projects</p>
+          <div class="quick-facts">
+            <div><span class="fact-number">01</span><span>Data platforms</span></div>
+            <div><span class="fact-number">02</span><span>GenAI applications</span></div>
+            <div><span class="fact-number">03</span><span>Production-minded engineering</span></div>
+          </div>
         </div>
-        <ol class="project-directory" id="project-directory" aria-label="Project directory"></ol>
-        <dialog class="project-dialog" id="project-dialog" aria-labelledby="doc-title">
-          <div class="doc-toolbar"><span>PROJECT DOCUMENTATION <span id="doc-number"></span></span><button class="doc-close" type="button" aria-label="Close project documentation">Close</button></div>
-          <article class="doc-page">
-            <header class="doc-heading"><p id="doc-type" class="doc-kicker"></p><h2 id="doc-title" tabindex="-1"></h2><p id="doc-summary" class="doc-summary"></p></header>
-            <figure class="doc-visual"><img id="doc-image" alt="" /><figcaption id="doc-caption"></figcaption></figure>
-            <div class="doc-reference"><span>PROJECT NOTE</span><span id="doc-reference-number"></span></div>
-            <section class="doc-section"><p class="doc-section-label">01 / OVERVIEW</p><p id="doc-overview"></p></section>
-            <section class="doc-section"><p class="doc-section-label">02 / SYSTEM FLOW</p><ol class="doc-workflow" id="doc-workflow"></ol></section>
-            <section class="doc-section"><p class="doc-section-label">03 / TECHNOLOGY</p><div class="doc-stack" id="doc-stack"></div></section>
-            <footer class="doc-footer"><span id="doc-source">Source code and project README</span><a id="doc-repository" href="#" target="_blank" rel="noreferrer">Open repository</a></footer>
+      </div>
+      <div class="automation-demo page-wrap reveal" aria-labelledby="automation-title">
+        <div class="automation-heading">
+          <div>
+            <p class="automation-kicker">GENAI ENGINEERING <span>/</span> ILLUSTRATIVE WORKFLOW</p>
+            <h3 id="automation-title">From an idea to reviewed code</h3>
+          </div>
+          <span class="automation-status"><i></i> HUMAN IN THE LOOP</span>
+        </div>
+        <div class="assistant-flow">
+          <article class="assistant-node assistant-source">
+            <span class="automation-label">01 / DEVELOPER INPUT</span>
+            <strong>Feature or question</strong>
+            <span class="automation-detail">Describe the change</span>
           </article>
-        </dialog>
-      </section>
+          <span class="workflow-connector" aria-hidden="true"><i></i></span>
+          <article class="assistant-node assistant-engine">
+            <span class="automation-label">02 / GENAI ASSISTANT</span>
+            <strong>Understand &amp; propose</strong>
+            <span class="automation-detail">Plan a useful approach</span>
+          </article>
+          <span class="workflow-connector" aria-hidden="true"><i></i></span>
+          <article class="assistant-node assistant-output">
+            <span class="automation-label">03 / FIRST DRAFT</span>
+            <strong>Code, tests, docs</strong>
+            <span class="automation-detail">Suggestions ready to inspect</span>
+          </article>
+          <span class="workflow-connector" aria-hidden="true"><i></i></span>
+          <article class="assistant-node assistant-review">
+            <span class="automation-label">04 / ENGINEER REVIEW</span>
+            <strong>Validate &amp; approve</strong>
+            <span class="automation-detail">Human review before release</span>
+          </article>
+        </div>
+      </div>
+    </section>
 
-      <section class="toolkit-section" id="skills">
-        <div class="page-wrap toolkit-layout">
-          <div class="toolkit-heading reveal"><p class="eyebrow">SKILLS &amp; TECHNOLOGIES <span class="eyebrow-separator">/</span> 03</p><h2>Skills for the<br />full data lifecycle.</h2><p>From ingestion and modelling to AI applications and production delivery.</p></div>
-          <div class="toolkit-list">
-            <div class="toolkit-row reveal"><span class="toolkit-index">01</span><div><h3>Programming &amp; data systems</h3><p>Python, SQL, Java, PostgreSQL, Oracle, MySQL, MongoDB, Snowflake</p></div><span class="row-plus">+</span></div>
-            <div class="toolkit-row reveal"><span class="toolkit-index">02</span><div><h3>Data engineering &amp; orchestration</h3><p>Apache Spark, Kafka, Airflow, dbt, Informatica, Apache NiFi, Flink</p></div><span class="row-plus">+</span></div>
-            <div class="toolkit-row reveal"><span class="toolkit-index">03</span><div><h3>Generative AI &amp; machine learning</h3><p>LLMs, RAG, LangChain, LangGraph, LlamaIndex, Pinecone, TensorFlow</p></div><span class="row-plus">+</span></div>
-            <div class="toolkit-row reveal"><span class="toolkit-index">04</span><div><h3>Cloud, DevOps &amp; observability</h3><p>AWS, Azure, Docker, Kubernetes, GitHub Actions, Jenkins, Grafana, Prometheus</p></div><span class="row-plus">+</span></div>
-            <div class="toolkit-row reveal"><span class="toolkit-index">05</span><div><h3>Analytics &amp; visualisation</h3><p>Power BI, Kibana, Elasticsearch</p></div><span class="row-plus">+</span></div>
+    <section class="work-section page-wrap" id="work">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow">PROJECT ARCHIVE <span class="eyebrow-separator">/</span> 02</p>
+          <h2>Questions behind the builds<span class="heading-period">.</span></h2>
+        </div>
+        <a class="text-link" href="https://github.com/AnasBenAmor10" target="_blank" rel="noreferrer">GitHub profile
+          <span aria-hidden="true">&#8599;</span></a>
+      </div>
+      <p class="project-intro reveal">Each project began with a question. Choose one to explore the idea, system flow,
+        and technology behind it.</p>
+      <div class="project-controls reveal" aria-label="Filter projects">
+        <div class="filter-group" role="group" aria-label="Project category">
+          <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All
+            projects</button>
+          <button class="filter-button" type="button" data-filter="ai" aria-pressed="false">AI &amp; GenAI</button>
+          <button class="filter-button" type="button" data-filter="data" aria-pressed="false">Data engineering</button>
+        </div>
+        <p class="project-count" aria-live="polite">Showing <span>8</span> projects</p>
+      </div>
+      <ol class="project-directory" id="project-directory" aria-label="Project directory"></ol>
+      <dialog class="project-dialog" id="project-dialog" aria-labelledby="doc-title">
+        <div class="doc-toolbar"><span>PROJECT DOCUMENTATION <span id="doc-number"></span></span><button
+            class="doc-close" type="button" aria-label="Close project documentation">Close</button></div>
+        <article class="doc-page">
+          <header class="doc-heading">
+            <p id="doc-type" class="doc-kicker"></p>
+            <h2 id="doc-title" tabindex="-1"></h2>
+            <p id="doc-summary" class="doc-summary"></p>
+          </header>
+          <figure class="doc-visual"><img id="doc-image" alt="" />
+            <figcaption id="doc-caption"></figcaption>
+          </figure>
+          <div class="doc-reference"><span>PROJECT NOTE</span><span id="doc-reference-number"></span></div>
+          <section class="doc-section">
+            <p class="doc-section-label">01 / OVERVIEW</p>
+            <p id="doc-overview"></p>
+          </section>
+          <section class="doc-section">
+            <p class="doc-section-label">02 / SYSTEM FLOW</p>
+            <ol class="doc-workflow" id="doc-workflow"></ol>
+          </section>
+          <section class="doc-section">
+            <p class="doc-section-label">03 / TECHNOLOGY</p>
+            <div class="doc-stack" id="doc-stack"></div>
+          </section>
+          <footer class="doc-footer"><span id="doc-source">Source code and project README</span><a id="doc-repository"
+              href="#" target="_blank" rel="noreferrer">Open repository</a></footer>
+        </article>
+      </dialog>
+    </section>
+
+    <section class="toolkit-section" id="skills">
+      <div class="page-wrap toolkit-layout">
+        <div class="toolkit-heading reveal">
+          <p class="eyebrow">SKILLS &amp; TECHNOLOGIES <span class="eyebrow-separator">/</span> 03</p>
+          <h2>Skills for the<br />full data lifecycle.</h2>
+          <p class="toolkit-lead">From ingestion and modelling to AI applications and production delivery. Open a group
+            to see the tools, then jump to the projects that prove them.</p>
+          <div class="focus-card">
+            <span class="focus-label"><i></i> CURRENTLY FOCUSED ON</span>
+            <ul class="focus-list">
+              <li>Cloud data modernization</li>
+              <li>Agentic AI</li>
+              <li>Data Engineering & orchestration</li>
+            </ul>
           </div>
+          <ul class="skill-legend" aria-label="Legend">
+            <li><i class="dot dot-daily"></i> Daily at work</li>
+            <li><i class="dot dot-project"></i> Shown in my projects</li>
+            <li><i class="dot"></i> Working knowledge</li>
+          </ul>
+          <a class="text-link toolkit-link" href="#credentials">See certifications <span
+              aria-hidden="true">&#8595;</span></a>
         </div>
-      </section>
+        <div class="toolkit-list">
+          <details class="skill-group reveal" name="skills" open>
+            <summary><span class="skill-index">01</span>
+              <h3>Data engineering &amp; orchestration</h3><span class="skill-badge skill-badge-hot">DAILY AT
+                GRDF</span><span class="skill-count"></span><span class="row-plus" aria-hidden="true">+</span>
+            </summary>
+            <div class="skill-panel">
+              <p class="skill-note">At GRDF: migrating Informatica PowerCenter flows to Snowflake + dbt, and building
+                reusable Airflow orchestration templates.</p>
+              <div class="skill-chips skill-tools"><span class="chip chip-daily">Snowflake</span><span
+                  class="chip chip-daily">dbt</span><span class="chip chip-daily">Airflow</span><span
+                  class="chip chip-daily">Informatica</span><span class="chip">Apache Spark</span><span
+                  class="chip">Kafka</span><span class="chip chip-project">Apache NiFi</span><span
+                  class="chip">Flink</span></div>
+              <p class="skill-sub">PRACTICES</p>
+              <div class="skill-chips chips-practice"><span class="chip">Data architecture</span><span class="chip">Data
+                  modelling</span><span class="chip">ELT / ETL</span><span class="chip">Data quality testing</span><span
+                  class="chip">Legacy migration</span><span class="chip">Performance tuning</span></div>
+              <p class="skill-sub">SEE IT IN ACTION</p>
+              <div class="skill-proofs"><button class="proof-link" type="button" data-project="elt-automation"
+                  aria-haspopup="dialog">ELT Pipeline Automation <span aria-hidden="true">&#8599;</span></button><button
+                  class="proof-link" type="button" data-project="agentic-oracle-snowflake" aria-haspopup="dialog">Oracle
+                  to Snowflake migration <span aria-hidden="true">&#8599;</span></button><button class="proof-link"
+                  type="button" data-project="flight-pipeline" aria-haspopup="dialog">Real-time Flight Pipeline <span
+                    aria-hidden="true">&#8599;</span></button></div>
+            </div>
+          </details>
+          <details class="skill-group reveal" name="skills">
+            <summary><span class="skill-index">02</span>
+              <h3>Generative AI &amp; machine learning</h3><span class="skill-badge">NVIDIA CERTIFIED</span><span
+                class="skill-count"></span><span class="row-plus" aria-hidden="true">+</span>
+            </summary>
+            <div class="skill-panel">
+              <p class="skill-note">Certified in building RAG agents (NVIDIA). Built assistants for voice, documents and
+                emergency reports, and use GenAI daily to speed up delivery.</p>
+              <div class="skill-chips skill-tools"><span class="chip chip-daily">LLMs</span><span
+                  class="chip chip-project">RAG</span><span class="chip">LangChain</span><span
+                  class="chip">LangGraph</span><span class="chip">LlamaIndex</span><span
+                  class="chip chip-project">Pinecone</span><span class="chip">TensorFlow</span><span
+                  class="chip chip-project">Whisper</span><span class="chip chip-project">ChromaDB</span><span
+                  class="chip chip-project">Azure OpenAI</span></div>
+              <p class="skill-sub">PRACTICES</p>
+              <div class="skill-chips chips-practice"><span class="chip">Multi-agent workflows</span><span
+                  class="chip">GenAI-assisted delivery</span><span class="chip">Speech &amp; vision</span><span
+                  class="chip">Document Q&amp;A</span></div>
+              <p class="skill-sub">SEE IT IN ACTION</p>
+              <div class="skill-proofs"><button class="proof-link" type="button" data-project="agentic-oracle-snowflake"
+                  aria-haspopup="dialog">Agentic migration <span aria-hidden="true">&#8599;</span></button><button
+                  class="proof-link" type="button" data-project="ambulance-sync" aria-haspopup="dialog">Ambulance ER
+                  Sync <span aria-hidden="true">&#8599;</span></button><button class="proof-link" type="button"
+                  data-project="multimodal-chatbot" aria-haspopup="dialog">Multimodal Chatbot <span
+                    aria-hidden="true">&#8599;</span></button><button class="proof-link" type="button"
+                  data-project="nifi-knowledge-assistant" aria-haspopup="dialog">Knowledge Assistant <span
+                    aria-hidden="true">&#8599;</span></button></div>
+            </div>
+          </details>
+          <details class="skill-group reveal" name="skills">
+            <summary><span class="skill-index">03</span>
+              <h3>Programming &amp; data systems</h3><span class="skill-badge">CORE TOOLS</span><span
+                class="skill-count"></span><span class="row-plus" aria-hidden="true">+</span>
+            </summary>
+            <div class="skill-panel">
+              <p class="skill-note">Python and SQL are my daily drivers across data and AI work, on top of relational
+                and NoSQL databases.</p>
+              <div class="skill-chips skill-tools"><span class="chip chip-daily">Python</span><span
+                  class="chip chip-daily">SQL</span><span class="chip">Java</span><span
+                  class="chip">PostgreSQL</span><span class="chip chip-project">Oracle</span><span
+                  class="chip">MySQL</span><span class="chip">MongoDB</span></div>
 
-      <section class="experience-section page-wrap" id="experience">
-        <div class="section-heading reveal">
-          <div><p class="eyebrow">EXPERIENCE &amp; EDUCATION <span class="eyebrow-separator">/</span> 04</p><h2>Where I've grown<span class="heading-period">.</span></h2></div>
-          <a class="text-link" href="img/cv/AnasBenAmorCV.pdf" target="_blank" rel="noreferrer">Full résumé <span aria-hidden="true">&#8599;</span></a>
+              <p class="skill-sub">SEE IT IN ACTION</p>
+              <div class="skill-proofs"><button class="proof-link" type="button" data-project="flight-pipeline"
+                  aria-haspopup="dialog">Real-time Flight Pipeline <span
+                    aria-hidden="true">&#8599;</span></button><button class="proof-link" type="button"
+                  data-project="ambulance-sync" aria-haspopup="dialog">Ambulance ER Sync <span
+                    aria-hidden="true">&#8599;</span></button></div>
+            </div>
+          </details>
+          <details class="skill-group reveal" name="skills">
+            <summary><span class="skill-index">04</span>
+              <h3>Cloud, DevOps &amp; observability</h3><span class="skill-badge">AWS CERTIFIED</span><span
+                class="skill-count"></span><span class="row-plus" aria-hidden="true">+</span>
+            </summary>
+            <div class="skill-panel">
+              <p class="skill-note">AWS Academy certified (Cloud Foundations, Data Engineering), plus Docker, Jenkins
+                and Git training from KodeKloud.</p>
+              <div class="skill-chips skill-tools"><span class="chip chip-project">AWS</span><span
+                  class="chip">Azure</span><span class="chip chip-project">Docker</span><span
+                  class="chip">Kubernetes</span><span class="chip">GitHub Actions</span><span
+                  class="chip">Jenkins</span><span class="chip chip-project">Grafana</span><span
+                  class="chip">Prometheus</span></div>
+
+              <p class="skill-sub">SEE IT IN ACTION</p>
+              <div class="skill-proofs"><button class="proof-link" type="button" data-project="air-quality"
+                  aria-haspopup="dialog">Air Quality on AWS <span aria-hidden="true">&#8599;</span></button><a
+                  class="proof-link" href="#credentials">Cloud &amp; DevOps certificates <span
+                    aria-hidden="true">&#8595;</span></a></div>
+            </div>
+          </details>
+          <details class="skill-group reveal" name="skills">
+            <summary><span class="skill-index">05</span>
+              <h3>Analytics &amp; visualisation</h3><span class="skill-badge">DASHBOARDS</span><span
+                class="skill-count"></span><span class="row-plus" aria-hidden="true">+</span>
+            </summary>
+            <div class="skill-panel">
+              <p class="skill-note">Dashboards and search experiences, from business intelligence to
+                Elasticsearch-powered exploration.</p>
+              <div class="skill-chips skill-tools"><span class="chip">Power BI</span><span
+                  class="chip">Kibana</span><span class="chip chip-project">Elasticsearch</span></div>
+
+              <p class="skill-sub">SEE IT IN ACTION</p>
+              <div class="skill-proofs"><button class="proof-link" type="button" data-project="image-text-search"
+                  aria-haspopup="dialog">Image &amp; Text Search <span aria-hidden="true">&#8599;</span></button><button
+                  class="proof-link" type="button" data-project="air-quality" aria-haspopup="dialog">Air Quality
+                  Dashboard <span aria-hidden="true">&#8599;</span></button></div>
+            </div>
+          </details>
         </div>
-        <div class="experience-layout">
-          <article class="experience-card reveal">
-            <div class="experience-card-top"><span class="experience-kicker">PROFESSIONAL EXPERIENCE</span><span class="experience-date">2025 — PRESENT</span></div>
-            <h3>Data Consultant</h3>
-            <p class="experience-company">Talan Tunisia Consulting <span>/</span> GRDF</p>
-            <p class="experience-description">I specialize in modernizing legacy data platforms for the cloud: migrating Informatica PowerCenter transformation flows to Snowflake and dbt, designing platform-ready data architectures, and delivering robust models and transformations. I build and customize reusable Airflow orchestration templates, optimize processing performance, and lead production releases. I also use GenAI to turn functional requirements into dbt projects and orchestration workflows, helping teams deliver data solutions more efficiently.</p>
-            <div class="tag-list"><span>Data architecture</span><span>Data modelling</span><span>Data Transformation</span><span>Data Orchestration</span><span>GenAi</span>
+      </div>
+    </section>
+
+    <section class="experience-section page-wrap" id="experience">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow">EXPERIENCE &amp; EDUCATION <span class="eyebrow-separator">/</span> 04</p>
+          <h2>Where I've grown<span class="heading-period">.</span></h2>
+        </div>
+        <a class="text-link" href="img/cv/AnasBenAmorCV.pdf" target="_blank" rel="noreferrer">Full résumé <span
+            aria-hidden="true">&#8599;</span></a>
+      </div>
+      <div class="experience-layout">
+        <article class="experience-card reveal">
+          <div class="experience-card-top"><span class="experience-kicker">PROFESSIONAL EXPERIENCE</span><span
+              class="experience-date">2025 — PRESENT</span></div>
+          <h3>Data Consultant</h3>
+          <p class="experience-company">Talan Tunisia Consulting <span>/</span> GRDF</p>
+          <p class="experience-description">I specialize in modernizing legacy data platforms for the cloud: migrating
+            Informatica PowerCenter transformation flows to Snowflake and dbt, designing platform-ready data
+            architectures, and delivering robust models and transformations. I build and customize reusable Airflow
+            orchestration templates, optimize processing performance, and lead production releases. I also use GenAI to
+            turn functional requirements into dbt projects and orchestration workflows, helping teams deliver data
+            solutions more efficiently.</p>
+          <div class="tag-list"><span>Data architecture</span><span>Data modelling</span><span>Data
+              Transformation</span><span>Data Orchestration</span><span>GenAi</span>
+          </div>
+        </article>
+        <aside class="data-avatar reveal" aria-label="Animated data engineering profile visual">
+          <div class="data-avatar-header"><span>DATA / GENAI</span><span class="avatar-live"><i></i> AT WORK</span>
+          </div>
+          <div class="workstation-scene">
+            <div class="workstation-monitor" aria-hidden="true">
+              <div class="monitor-header"><span>DATA WORKSPACE</span><i></i></div>
+              <div class="monitor-content">
+                <div class="monitor-code"><span><b>01</b><i
+                      class="code-line code-line-long"></i></span><span><b>02</b><i
+                      class="code-line code-line-medium"></i></span><span><b>03</b><i
+                      class="code-line code-line-short"></i></span><span><b>04</b><i
+                      class="code-line code-line-long"></i></span></div>
+                <div class="monitor-chart"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              </div>
+            </div>
+            <span class="monitor-stand" aria-hidden="true"></span>
+            <span class="monitor-base" aria-hidden="true"></span>
+            <div class="workstation-person"><span class="workstation-emoji" role="img"
+                aria-label="Person working at a computer">🧑‍💻</span></div>
+            <div class="workstation-laptop" aria-hidden="true"><span></span><i></i></div>
+          </div>
+          <div class="avatar-flow"><span>DATA</span><i></i><span>TRANSFORM</span><i></i><span>DELIVER</span></div>
+          <p class="avatar-caption"><strong>Engineering the flow.</strong><span>From source data to useful
+              systems.</span></p>
+        </aside>
+        <div class="internship-list">
+          <h3 class="education-heading">Experience</h3>
+          <article class="internship-item reveal"><span class="internship-date">END OF STUDY</span>
+            <div>
+              <h4>End-of-study internship</h4>
+              <p>Talan Tunisia Consulting <span>/</span> Data Engineering &amp; Generative AI</p>
+              <p class="internship-description">Worked across data engineering and generative AI, building experience
+                that connects data workflows with AI capabilities.</p>
             </div>
           </article>
-          <aside class="data-avatar reveal" aria-label="Animated data engineering profile visual">
-            <div class="data-avatar-header"><span>DATA / GENAI</span><span class="avatar-live"><i></i> AT WORK</span></div>
-            <div class="workstation-scene">
-              <div class="workstation-monitor" aria-hidden="true">
-                <div class="monitor-header"><span>DATA WORKSPACE</span><i></i></div>
-                <div class="monitor-content">
-                  <div class="monitor-code"><span><b>01</b><i class="code-line code-line-long"></i></span><span><b>02</b><i class="code-line code-line-medium"></i></span><span><b>03</b><i class="code-line code-line-short"></i></span><span><b>04</b><i class="code-line code-line-long"></i></span></div>
-                  <div class="monitor-chart"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <article class="internship-item reveal"><span class="internship-date">2024 — 2025</span>
+            <div>
+              <h4>Data Science Intern</h4>
+              <p>Sagemcom <span>/</span> Data Science</p>
+              <p class="internship-description">Applied data science methods in an industry internship, strengthening my
+                experience working with data-driven problems.</p>
+            </div>
+          </article>
+          <article class="internship-item reveal"><span class="internship-date">2024</span>
+            <div>
+              <h4>Data Engineering &amp; GenAI Intern</h4>
+              <p>Orthlane <span>/</span> Data Engineering &amp; Generative AI</p>
+              <p class="internship-description">Explored how data engineering workflows and generative AI can work
+                together in practical solutions.</p>
+            </div>
+          </article>
+          <article class="internship-item reveal"><span class="internship-date">2023</span>
+            <div>
+              <h4>Web Development Intern</h4>
+              <p>nachd it <span>/</span> Web Development</p>
+              <p class="internship-description">Built foundational experience in developing web applications and
+                delivering web-focused solutions.</p>
+            </div>
+          </article>
+        </div>
+        <div class="education-list">
+          <h3 class="education-heading">Education</h3>
+          <article class="education-item reveal"><span class="education-date">2022 — 2025</span>
+            <div>
+              <h4>Engineering Cycle</h4>
+              <p>Higher School of Communication of Tunis</p>
+            </div>
+          </article>
+          <article class="education-item reveal"><span class="education-date">2020 — 2022</span>
+            <div>
+              <h4>Preparatory Cycle</h4>
+              <p>Preparatory Institute for Engineering, Monastir</p>
+            </div>
+          </article>
+          <article class="education-item reveal"><span class="education-date">2016 — 2020</span>
+            <div>
+              <h4>High School</h4>
+              <p>Lycée Tahar Sfar, Sousse</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="journey-note-band" aria-labelledby="journey-note-title">
+      <div class="page-wrap journey-note-layout">
+        <p class="eyebrow reveal">BEYOND THE ROLE <span class="eyebrow-separator">/</span> 05</p>
+        <div class="journey-note-copy reveal">
+          <h2 id="journey-note-title">A journey built<br />beyond the job title.</h2>
+          <p>My growth is not limited to my day-to-day work. I keep learning through focused study and hands-on
+            projects, while volunteering in technical communities and events. These experiences help me stay curious,
+            collaborate with purpose, and bring a broader perspective to the systems I build.</p>
+          <div class="journey-pillars"><span>01 <b>Keep learning</b></span><span>02 <b>Share
+                knowledge</b></span><span>03 <b>Build together</b></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="credentials-section page-wrap" id="credentials">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow">CONTINUOUS LEARNING <span class="eyebrow-separator">/</span> 06</p>
+          <h2>Credentials<span class="heading-period">.</span></h2>
+        </div>
+        <span class="section-count">10 CERTIFICATES</span>
+      </div>
+      <p class="section-intro reveal">Selected credentials across cloud, data engineering, machine learning, and DevOps.
+      </p>
+      <div class="credentials-grid">
+        <a class="credential-row reveal" href="img/certif/certif8.png" target="_blank" rel="noreferrer"
+          aria-label="View AWS Academy Cloud Foundations certificate">
+          <span class="credential-number">01</span><span class="credential-image"><img src="img/certif/certif8.png"
+              alt="" loading="lazy" /></span>
+          <span class="credential-copy"><span class="credential-track">CLOUD</span><strong>AWS Academy Cloud
+              Foundations</strong><small>AWS Academy</small></span><span class="credential-action">View <span
+              aria-hidden="true">&#8599;</span></span>
+        </a>
+        <a class="credential-row reveal" href="img/certif/certif9.png" target="_blank" rel="noreferrer"
+          aria-label="View AWS Academy Data Engineering certificate">
+          <span class="credential-number">02</span><span class="credential-image"><img src="img/certif/certif9.png"
+              alt="" loading="lazy" /></span>
+          <span class="credential-copy"><span class="credential-track">DATA ENGINEERING</span><strong>AWS Academy Data
+              Engineering</strong><small>AWS Academy</small></span><span class="credential-action">View <span
+              aria-hidden="true">&#8599;</span></span>
+        </a>
+        <a class="credential-row reveal" href="img/certif/certif10.png" target="_blank" rel="noreferrer"
+          aria-label="View NVIDIA Building RAG Agents with LLMs certificate">
+          <span class="credential-number">03</span><span class="credential-image"><img src="img/certif/certif10.png"
+              alt="" loading="lazy" /></span>
+          <span class="credential-copy"><span class="credential-track">GENERATIVE AI</span><strong>Building RAG Agents
+              with LLMs</strong><small>NVIDIA <span>/</span> Nov 2024</small></span><span class="credential-action">View
+            <span aria-hidden="true">&#8599;</span></span>
+        </a>
+        <a class="credential-row reveal" href="img/certif/certif2.jpg" target="_blank" rel="noreferrer"
+          aria-label="View Supervised Machine Learning certificate">
+          <span class="credential-number">04</span><span class="credential-image"><img src="img/certif/certif2.jpg"
+              alt="" loading="lazy" /></span>
+          <span class="credential-copy"><span class="credential-track">MACHINE LEARNING</span><strong>Supervised Machine
+              Learning: Regression and Classification</strong><small>DeepLearning.AI &amp; Stanford Online
+              <span>/</span> Aug 2023</small></span><span class="credential-action">View <span
+              aria-hidden="true">&#8599;</span></span>
+        </a>
+        <a class="credential-row reveal" href="img/certif/certif3.jpg" target="_blank" rel="noreferrer"
+          aria-label="View Machine Learning certificate from SoloLearn">
+          <span class="credential-number">05</span><span class="credential-image"><img src="img/certif/certif3.jpg"
+              alt="" loading="lazy" /></span>
+          <span class="credential-copy"><span class="credential-track">MACHINE LEARNING</span><strong>Machine
+              Learning</strong><small>SoloLearn <span>/</span> Apr 2023</small></span><span
+            class="credential-action">View <span aria-hidden="true">&#8599;</span></span>
+        </a>
+        <a class="credential-row reveal" href="img/certif/certif5.png" target="_blank" rel="noreferrer"
+          aria-label="View Machine Learning with MATLAB certificate">
+          <span class="credential-number">06</span><span class="credential-image"><img src="img/certif/certif5.png"
+              alt="" loading="lazy" /></span>
+          <span class="credential-copy"><span class="credential-track">MACHINE LEARNING</span><strong>Machine Learning
+              with MATLAB</strong><small>MathWorks <span>/</span> Apr 2024</small></span><span
+            class="credential-action">View <span aria-hidden="true">&#8599;</span></span>
+        </a>
+        <a class="credential-row reveal" href="img/certif/certif4.png" target="_blank" rel="noreferrer"
+          aria-label="View Docker Training Course for the Absolute Beginner certificate">
+          <span class="credential-number">07</span><span class="credential-image"><img src="img/certif/certif4.png"
+              alt="" loading="lazy" /></span>
+          <span class="credential-copy"><span class="credential-track">DEVOPS</span><strong>Docker Training Course for
+              the Absolute Beginner</strong><small>KodeKloud <span>/</span> Apr 2024</small></span><span
+            class="credential-action">View <span aria-hidden="true">&#8599;</span></span>
+        </a>
+        <a class="credential-row reveal" href="img/certif/certif7.png" target="_blank" rel="noreferrer"
+          aria-label="View Jenkins certificate">
+          <span class="credential-number">08</span><span class="credential-image"><img src="img/certif/certif7.png"
+              alt="" loading="lazy" /></span>
+          <span class="credential-copy"><span
+              class="credential-track">DEVOPS</span><strong>Jenkins</strong><small>KodeKloud <span>/</span> Apr
+              2024</small></span><span class="credential-action">View <span aria-hidden="true">&#8599;</span></span>
+        </a>
+        <a class="credential-row reveal" href="img/certif/certif6.png" target="_blank" rel="noreferrer"
+          aria-label="View DevOps Pre-Requisite Course certificate">
+          <span class="credential-number">09</span><span class="credential-image"><img src="img/certif/certif6.png"
+              alt="" loading="lazy" /></span>
+          <span class="credential-copy"><span class="credential-track">DEVOPS</span><strong>DevOps Pre-Requisite
+              Course</strong><small>KodeKloud <span>/</span> Apr 2024</small></span><span class="credential-action">View
+            <span aria-hidden="true">&#8599;</span></span>
+        </a>
+        <a class="credential-row reveal" href="img/certif/certif1.png" target="_blank" rel="noreferrer"
+          aria-label="View Git for Beginners certificate">
+          <span class="credential-number">10</span><span class="credential-image"><img src="img/certif/certif1.png"
+              alt="" loading="lazy" /></span>
+          <span class="credential-copy"><span class="credential-track">DEVELOPER TOOLS</span><strong>Git for
+              Beginners</strong><small>KodeKloud <span>/</span> Apr 2024</small></span><span
+            class="credential-action">View <span aria-hidden="true">&#8599;</span></span>
+        </a>
+      </div>
+    </section>
+
+    <section class="community-section" id="volunteering">
+      <div class="page-wrap community-content">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">COMMUNITY <span class="eyebrow-separator">/</span> 07</p>
+            <h2>Volunteering &amp; service<span class="heading-period">.</span></h2>
+          </div>
+          <span class="section-count">6 CONTRIBUTIONS</span>
+        </div>
+        <p class="section-intro reveal">Community events and organizations where I contributed across logistics, people
+          operations, and media.</p>
+        <div class="community-grid">
+          <article class="community-item reveal">
+            <img src="img/experience/exp1.JPG" alt="IndabaX 2023 event" loading="lazy" />
+            <div class="community-body"><span class="community-track">EVENT LOGISTICS</span>
+              <h3>IndabaX 2023</h3>
+              <p class="community-role">Logistics Manager</p>
+              <details class="community-details">
+                <summary>Contribution &amp; professional growth</summary>
+                <div class="community-detail"><span>CONTRIBUTION</span>
+                  <p>Coordinated event logistics for a community centered on AI and data.</p>
                 </div>
-              </div>
-              <span class="monitor-stand" aria-hidden="true"></span>
-              <span class="monitor-base" aria-hidden="true"></span>
-              <div class="workstation-person"><span class="workstation-emoji" role="img" aria-label="Person working at a computer">🧑‍💻</span></div>
-              <div class="workstation-laptop" aria-hidden="true"><span></span><i></i></div>
+                <div class="community-detail"><span>PROFESSIONAL VALUE</span>
+                  <p>Strengthened planning, cross-team coordination, and calm execution under time pressure.</p>
+                </div>
+              </details>
             </div>
-            <div class="avatar-flow"><span>DATA</span><i></i><span>TRANSFORM</span><i></i><span>DELIVER</span></div>
-            <p class="avatar-caption"><strong>Engineering the flow.</strong><span>From source data to useful systems.</span></p>
-          </aside>
-          <div class="internship-list">
-            <h3 class="education-heading">Experience</h3>
-            <article class="internship-item reveal"><span class="internship-date">END OF STUDY</span><div><h4>End-of-study internship</h4><p>Talan Tunisia Consulting <span>/</span> Data Engineering &amp; Generative AI</p><p class="internship-description">Worked across data engineering and generative AI, building experience that connects data workflows with AI capabilities.</p></div></article>
-            <article class="internship-item reveal"><span class="internship-date">2024 — 2025</span><div><h4>Data Science Intern</h4><p>Sagemcom <span>/</span> Data Science</p><p class="internship-description">Applied data science methods in an industry internship, strengthening my experience working with data-driven problems.</p></div></article>
-            <article class="internship-item reveal"><span class="internship-date">2024</span><div><h4>Data Engineering &amp; GenAI Intern</h4><p>Orthlane <span>/</span> Data Engineering &amp; Generative AI</p><p class="internship-description">Explored how data engineering workflows and generative AI can work together in practical solutions.</p></div></article>
-            <article class="internship-item reveal"><span class="internship-date">2023</span><div><h4>Web Development Intern</h4><p>nachd it <span>/</span> Web Development</p><p class="internship-description">Built foundational experience in developing web applications and delivering web-focused solutions.</p></div></article>
-          </div>
-          <div class="education-list">
-            <h3 class="education-heading">Education</h3>
-            <article class="education-item reveal"><span class="education-date">2022 — 2025</span><div><h4>Engineering Cycle</h4><p>Higher School of Communication of Tunis</p></div></article>
-            <article class="education-item reveal"><span class="education-date">2020 — 2022</span><div><h4>Preparatory Cycle</h4><p>Preparatory Institute for Engineering, Monastir</p></div></article>
-            <article class="education-item reveal"><span class="education-date">2016 — 2020</span><div><h4>High School</h4><p>Lycée Tahar Sfar, Sousse</p></div></article>
-          </div>
-        </div>
-      </section>
-
-      <section class="journey-note-band" aria-labelledby="journey-note-title">
-        <div class="page-wrap journey-note-layout">
-          <p class="eyebrow reveal">BEYOND THE ROLE <span class="eyebrow-separator">/</span> 05</p>
-          <div class="journey-note-copy reveal">
-            <h2 id="journey-note-title">A journey built<br />beyond the job title.</h2>
-            <p>My growth is not limited to my day-to-day work. I keep learning through focused study and hands-on projects, while volunteering in technical communities and events. These experiences help me stay curious, collaborate with purpose, and bring a broader perspective to the systems I build.</p>
-            <div class="journey-pillars"><span>01 <b>Keep learning</b></span><span>02 <b>Share knowledge</b></span><span>03 <b>Build together</b></span></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="credentials-section page-wrap" id="credentials">
-        <div class="section-heading reveal">
-          <div><p class="eyebrow">CONTINUOUS LEARNING <span class="eyebrow-separator">/</span> 06</p><h2>Credentials<span class="heading-period">.</span></h2></div>
-          <span class="section-count">10 CERTIFICATES</span>
-        </div>
-        <p class="section-intro reveal">Selected credentials across cloud, data engineering, machine learning, and DevOps.</p>
-        <div class="credentials-grid">
-          <a class="credential-row reveal" href="img/certif/certif8.png" target="_blank" rel="noreferrer" aria-label="View AWS Academy Cloud Foundations certificate">
-            <span class="credential-number">01</span><span class="credential-image"><img src="img/certif/certif8.png" alt="" loading="lazy" /></span>
-            <span class="credential-copy"><span class="credential-track">CLOUD</span><strong>AWS Academy Cloud Foundations</strong><small>AWS Academy</small></span><span class="credential-action">View <span aria-hidden="true">&#8599;</span></span>
-          </a>
-          <a class="credential-row reveal" href="img/certif/certif9.png" target="_blank" rel="noreferrer" aria-label="View AWS Academy Data Engineering certificate">
-            <span class="credential-number">02</span><span class="credential-image"><img src="img/certif/certif9.png" alt="" loading="lazy" /></span>
-            <span class="credential-copy"><span class="credential-track">DATA ENGINEERING</span><strong>AWS Academy Data Engineering</strong><small>AWS Academy</small></span><span class="credential-action">View <span aria-hidden="true">&#8599;</span></span>
-          </a>
-          <a class="credential-row reveal" href="img/certif/certif10.png" target="_blank" rel="noreferrer" aria-label="View NVIDIA Building RAG Agents with LLMs certificate">
-            <span class="credential-number">03</span><span class="credential-image"><img src="img/certif/certif10.png" alt="" loading="lazy" /></span>
-            <span class="credential-copy"><span class="credential-track">GENERATIVE AI</span><strong>Building RAG Agents with LLMs</strong><small>NVIDIA <span>/</span> Nov 2024</small></span><span class="credential-action">View <span aria-hidden="true">&#8599;</span></span>
-          </a>
-          <a class="credential-row reveal" href="img/certif/certif2.jpg" target="_blank" rel="noreferrer" aria-label="View Supervised Machine Learning certificate">
-            <span class="credential-number">04</span><span class="credential-image"><img src="img/certif/certif2.jpg" alt="" loading="lazy" /></span>
-            <span class="credential-copy"><span class="credential-track">MACHINE LEARNING</span><strong>Supervised Machine Learning: Regression and Classification</strong><small>DeepLearning.AI &amp; Stanford Online <span>/</span> Aug 2023</small></span><span class="credential-action">View <span aria-hidden="true">&#8599;</span></span>
-          </a>
-          <a class="credential-row reveal" href="img/certif/certif3.jpg" target="_blank" rel="noreferrer" aria-label="View Machine Learning certificate from SoloLearn">
-            <span class="credential-number">05</span><span class="credential-image"><img src="img/certif/certif3.jpg" alt="" loading="lazy" /></span>
-            <span class="credential-copy"><span class="credential-track">MACHINE LEARNING</span><strong>Machine Learning</strong><small>SoloLearn <span>/</span> Apr 2023</small></span><span class="credential-action">View <span aria-hidden="true">&#8599;</span></span>
-          </a>
-          <a class="credential-row reveal" href="img/certif/certif5.png" target="_blank" rel="noreferrer" aria-label="View Machine Learning with MATLAB certificate">
-            <span class="credential-number">06</span><span class="credential-image"><img src="img/certif/certif5.png" alt="" loading="lazy" /></span>
-            <span class="credential-copy"><span class="credential-track">MACHINE LEARNING</span><strong>Machine Learning with MATLAB</strong><small>MathWorks <span>/</span> Apr 2024</small></span><span class="credential-action">View <span aria-hidden="true">&#8599;</span></span>
-          </a>
-          <a class="credential-row reveal" href="img/certif/certif4.png" target="_blank" rel="noreferrer" aria-label="View Docker Training Course for the Absolute Beginner certificate">
-            <span class="credential-number">07</span><span class="credential-image"><img src="img/certif/certif4.png" alt="" loading="lazy" /></span>
-            <span class="credential-copy"><span class="credential-track">DEVOPS</span><strong>Docker Training Course for the Absolute Beginner</strong><small>KodeKloud <span>/</span> Apr 2024</small></span><span class="credential-action">View <span aria-hidden="true">&#8599;</span></span>
-          </a>
-          <a class="credential-row reveal" href="img/certif/certif7.png" target="_blank" rel="noreferrer" aria-label="View Jenkins certificate">
-            <span class="credential-number">08</span><span class="credential-image"><img src="img/certif/certif7.png" alt="" loading="lazy" /></span>
-            <span class="credential-copy"><span class="credential-track">DEVOPS</span><strong>Jenkins</strong><small>KodeKloud <span>/</span> Apr 2024</small></span><span class="credential-action">View <span aria-hidden="true">&#8599;</span></span>
-          </a>
-          <a class="credential-row reveal" href="img/certif/certif6.png" target="_blank" rel="noreferrer" aria-label="View DevOps Pre-Requisite Course certificate">
-            <span class="credential-number">09</span><span class="credential-image"><img src="img/certif/certif6.png" alt="" loading="lazy" /></span>
-            <span class="credential-copy"><span class="credential-track">DEVOPS</span><strong>DevOps Pre-Requisite Course</strong><small>KodeKloud <span>/</span> Apr 2024</small></span><span class="credential-action">View <span aria-hidden="true">&#8599;</span></span>
-          </a>
-          <a class="credential-row reveal" href="img/certif/certif1.png" target="_blank" rel="noreferrer" aria-label="View Git for Beginners certificate">
-            <span class="credential-number">10</span><span class="credential-image"><img src="img/certif/certif1.png" alt="" loading="lazy" /></span>
-            <span class="credential-copy"><span class="credential-track">DEVELOPER TOOLS</span><strong>Git for Beginners</strong><small>KodeKloud <span>/</span> Apr 2024</small></span><span class="credential-action">View <span aria-hidden="true">&#8599;</span></span>
-          </a>
-        </div>
-      </section>
-
-      <section class="community-section" id="volunteering">
-        <div class="page-wrap community-content">
-          <div class="section-heading reveal">
-            <div><p class="eyebrow">COMMUNITY <span class="eyebrow-separator">/</span> 07</p><h2>Volunteering &amp; service<span class="heading-period">.</span></h2></div>
-            <span class="section-count">6 CONTRIBUTIONS</span>
-          </div>
-          <p class="section-intro reveal">Community events and organizations where I contributed across logistics, people operations, and media.</p>
-          <div class="community-grid">
-            <article class="community-item reveal">
-              <img src="img/experience/exp1.JPG" alt="IndabaX 2023 event" loading="lazy" />
-              <div class="community-body"><span class="community-track">EVENT LOGISTICS</span><h3>IndabaX 2023</h3><p class="community-role">Logistics Manager</p>
-                <details class="community-details"><summary>Contribution &amp; professional growth</summary>
-                  <div class="community-detail"><span>CONTRIBUTION</span><p>Coordinated event logistics for a community centered on AI and data.</p></div>
-                  <div class="community-detail"><span>PROFESSIONAL VALUE</span><p>Strengthened planning, cross-team coordination, and calm execution under time pressure.</p></div>
-                </details>
-              </div>
-            </article>
-            <article class="community-item reveal">
-              <img src="img/experience/exp2.jpg" alt="Forum SUP'COM 2023 event" loading="lazy" />
-              <div class="community-body"><span class="community-track">EVENT LOGISTICS</span><h3>Forum SUP'COM 2023</h3><p class="community-role">Logistics Manager</p>
-                <details class="community-details"><summary>Contribution &amp; professional growth</summary>
-                  <div class="community-detail"><span>CONTRIBUTION</span><p>Supported the planning and logistics behind the SUP'COM forum.</p></div>
-                  <div class="community-detail"><span>PROFESSIONAL VALUE</span><p>Built stronger operational coordination, communication, and attention to detail.</p></div>
-                </details>
-              </div>
-            </article>
-            <article class="community-item reveal">
-              <img src="img/experience/exp9.jpeg" alt="IEEE Women in Engineering SUP'COM" loading="lazy" />
-              <div class="community-body"><span class="community-track">PEOPLE OPERATIONS</span><h3>IEEE WIE SUPCOM Affinity Group</h3><p class="community-role">HR Manager</p>
-                <details class="community-details"><summary>Contribution &amp; professional growth</summary>
-                  <div class="community-detail"><span>CONTRIBUTION</span><p>Contributed to HR activities and supporting people within the affinity group.</p></div>
-                  <div class="community-detail"><span>PROFESSIONAL VALUE</span><p>Practiced active listening, understanding different perspectives, and helping teams work through disagreements constructively.</p></div>
-                </details>
-              </div>
-            </article>
-            <article class="community-item reveal">
-              <img src="img/experience/exp4.jpg" alt="SIGHT Challenge and STAR Program" loading="lazy" />
-              <div class="community-body"><span class="community-track">IEEE / TSYP 11</span><h3>SIGHT Challenge &amp; STAR Program</h3><p class="community-role">TSYP 11 volunteer</p>
-                <details class="community-details"><summary>Contribution &amp; professional growth</summary>
-                  <div class="community-detail"><span>CONTRIBUTION</span><p>Participated and lead in the SIGHT Challenge and STAR Program as part of TSYP 11.</p></div>
-                  <div class="community-detail"><span>PROFESSIONAL VALUE</span><p>Gained experience collaborating with a technical community around shared program goals.</p></div>
-                </details>
-              </div>
-            </article>
-            <article class="community-item reveal">
-              <img src="img/experience/exp6.jpg" alt="Metaverse Tunisia Summit 2.0" loading="lazy" />
-              <div class="community-body"><span class="community-track">EVENT LOGISTICS</span><h3>Metaverse Tunisia Summit 2.0</h3><p class="community-role">Logistics</p>
-                <details class="community-details"><summary>Contribution &amp; professional growth</summary>
-                  <div class="community-detail"><span>CONTRIBUTION</span><p>Supported logistics for a technology-focused summit.</p></div>
-                  <div class="community-detail"><span>PROFESSIONAL VALUE</span><p>Sharpened adaptability, organization, and coordination in a live event environment.</p></div>
-                </details>
-              </div>
-            </article>
-            <article class="community-item reveal">
-              <img src="img/experience/exp3.jpg" alt="Code In The Dark event" loading="lazy" />
-              <div class="community-body"><span class="community-track">EVENT MEDIA</span><h3>Code In The Dark</h3><p class="community-role">Media Member</p>
-                <details class="community-details"><summary>Contribution &amp; professional growth</summary>
-                  <div class="community-detail"><span>CONTRIBUTION</span><p>Contributed to the event's media activities and coverage.</p></div>
-                  <div class="community-detail"><span>PROFESSIONAL VALUE</span><p>Developed concise communication, visual storytelling, and collaboration with event teams.</p></div>
-                </details>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="contact-section" id="contact">
-        <div class="page-wrap contact-layout reveal">
-          <div class="contact-copy">
-            <p class="eyebrow">HAVE A PROJECT IN MIND? <span class="eyebrow-separator">/</span> 08</p>
-            <h2>Let's make<br />something <span>matter.</span></h2>
-            <p class="contact-intro">Open to freelance projects and thoughtful collaborations across data engineering and GenAI.</p>
-            <a class="contact-email-card" href="mailto:benamoranas2001@gmail.com">
-              <span class="email-card-icon" aria-hidden="true">@</span>
-              <span class="email-card-copy"><span class="email-card-label">EMAIL ME DIRECTLY</span><strong>benamoranas2001@gmail.com</strong><small>Opens a new email to Anas</small></span>
-              <span class="email-card-arrow" aria-hidden="true">&#8599;</span>
-            </a>
-          </div>
-          <div class="contact-actions">
-            <div class="availability-card">
-              <span class="availability-dot" aria-hidden="true"></span>
-              <div><span class="availability-label">CURRENTLY</span><strong>Available for freelance projects</strong></div>
-              <span class="availability-response">Replies within 24 hours</span>
+          </article>
+          <article class="community-item reveal">
+            <img src="img/experience/exp2.jpg" alt="Forum SUP'COM 2023 event" loading="lazy" />
+            <div class="community-body"><span class="community-track">EVENT LOGISTICS</span>
+              <h3>Forum SUP'COM 2023</h3>
+              <p class="community-role">Logistics Manager</p>
+              <details class="community-details">
+                <summary>Contribution &amp; professional growth</summary>
+                <div class="community-detail"><span>CONTRIBUTION</span>
+                  <p>Supported the planning and logistics behind the SUP'COM forum.</p>
+                </div>
+                <div class="community-detail"><span>PROFESSIONAL VALUE</span>
+                  <p>Built stronger operational coordination, communication, and attention to detail.</p>
+                </div>
+              </details>
             </div>
-            <a class="calendar-card" href="https://calendly.com/anasbenomer2018/30min" target="_blank" rel="noreferrer">
-              <span class="calendar-kicker">30 MINUTES <span aria-hidden="true">/</span> CALENDLY</span>
-              <strong>Schedule a conversation</strong>
-              <span class="calendar-arrow" aria-hidden="true">&#8599;</span>
-            </a>
-            <div class="quick-actions" aria-label="More ways to connect">
-              <a href="img/cv/AnasBenAmorCV.pdf" target="_blank" rel="noreferrer">Résumé <span aria-hidden="true">&#8599;</span></a>
-              <a href="https://www.linkedin.com/in/anas-ben-amor-115603247/" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">&#8599;</span></a>
-              <a href="https://github.com/AnasBenAmor10" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">&#8599;</span></a>
+          </article>
+          <article class="community-item reveal">
+            <img src="img/experience/exp9.jpeg" alt="IEEE Women in Engineering SUP'COM" loading="lazy" />
+            <div class="community-body"><span class="community-track">PEOPLE OPERATIONS</span>
+              <h3>IEEE WIE SUPCOM Affinity Group</h3>
+              <p class="community-role">HR Manager</p>
+              <details class="community-details">
+                <summary>Contribution &amp; professional growth</summary>
+                <div class="community-detail"><span>CONTRIBUTION</span>
+                  <p>Contributed to HR activities and supporting people within the affinity group.</p>
+                </div>
+                <div class="community-detail"><span>PROFESSIONAL VALUE</span>
+                  <p>Practiced active listening, understanding different perspectives, and helping teams work through
+                    disagreements constructively.</p>
+                </div>
+              </details>
             </div>
+          </article>
+          <article class="community-item reveal">
+            <img src="img/experience/exp4.jpg" alt="SIGHT Challenge and STAR Program" loading="lazy" />
+            <div class="community-body"><span class="community-track">IEEE / TSYP 11</span>
+              <h3>SIGHT Challenge &amp; STAR Program</h3>
+              <p class="community-role">TSYP 11 volunteer</p>
+              <details class="community-details">
+                <summary>Contribution &amp; professional growth</summary>
+                <div class="community-detail"><span>CONTRIBUTION</span>
+                  <p>Participated and lead in the SIGHT Challenge and STAR Program as part of TSYP 11.</p>
+                </div>
+                <div class="community-detail"><span>PROFESSIONAL VALUE</span>
+                  <p>Gained experience collaborating with a technical community around shared program goals.</p>
+                </div>
+              </details>
+            </div>
+          </article>
+          <article class="community-item reveal">
+            <img src="img/experience/exp6.jpg" alt="Metaverse Tunisia Summit 2.0" loading="lazy" />
+            <div class="community-body"><span class="community-track">EVENT LOGISTICS</span>
+              <h3>Metaverse Tunisia Summit 2.0</h3>
+              <p class="community-role">Logistics</p>
+              <details class="community-details">
+                <summary>Contribution &amp; professional growth</summary>
+                <div class="community-detail"><span>CONTRIBUTION</span>
+                  <p>Supported logistics for a technology-focused summit.</p>
+                </div>
+                <div class="community-detail"><span>PROFESSIONAL VALUE</span>
+                  <p>Sharpened adaptability, organization, and coordination in a live event environment.</p>
+                </div>
+              </details>
+            </div>
+          </article>
+          <article class="community-item reveal">
+            <img src="img/experience/exp3.jpg" alt="Code In The Dark event" loading="lazy" />
+            <div class="community-body"><span class="community-track">EVENT MEDIA</span>
+              <h3>Code In The Dark</h3>
+              <p class="community-role">Media Member</p>
+              <details class="community-details">
+                <summary>Contribution &amp; professional growth</summary>
+                <div class="community-detail"><span>CONTRIBUTION</span>
+                  <p>Contributed to the event's media activities and coverage.</p>
+                </div>
+                <div class="community-detail"><span>PROFESSIONAL VALUE</span>
+                  <p>Developed concise communication, visual storytelling, and collaboration with event teams.</p>
+                </div>
+              </details>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="page-wrap contact-layout reveal">
+        <div class="contact-copy">
+          <p class="eyebrow">HAVE A PROJECT IN MIND? <span class="eyebrow-separator">/</span> 08</p>
+          <h2>Let's make<br />something <span>matter.</span></h2>
+          <p class="contact-intro">Open to freelance projects and thoughtful collaborations across data engineering and
+            GenAI.</p>
+          <a class="contact-email-card" href="mailto:benamoranas2001@gmail.com">
+            <span class="email-card-icon" aria-hidden="true">@</span>
+            <span class="email-card-copy"><span class="email-card-label">EMAIL ME
+                DIRECTLY</span><strong>benamoranas2001@gmail.com</strong><small>Opens a new email to Anas</small></span>
+            <span class="email-card-arrow" aria-hidden="true">&#8599;</span>
+          </a>
+        </div>
+        <div class="contact-actions">
+          <div class="availability-card">
+            <span class="availability-dot" aria-hidden="true"></span>
+            <div><span class="availability-label">CURRENTLY</span><strong>Available for freelance projects</strong>
+            </div>
+            <span class="availability-response">Replies within 24 hours</span>
+          </div>
+          <a class="calendar-card" href="https://calendly.com/anasbenomer2018/30min" target="_blank" rel="noreferrer">
+            <span class="calendar-kicker">30 MINUTES <span aria-hidden="true">/</span> CALENDLY</span>
+            <strong>Schedule a conversation</strong>
+            <span class="calendar-arrow" aria-hidden="true">&#8599;</span>
+          </a>
+          <div class="quick-actions" aria-label="More ways to connect">
+            <a href="img/cv/AnasBenAmorCV.pdf" target="_blank" rel="noreferrer">Résumé <span
+                aria-hidden="true">&#8599;</span></a>
+            <a href="https://www.linkedin.com/in/anas-ben-amor-115603247/" target="_blank" rel="noreferrer">LinkedIn
+              <span aria-hidden="true">&#8599;</span></a>
+            <a href="https://github.com/AnasBenAmor10" target="_blank" rel="noreferrer">GitHub <span
+                aria-hidden="true">&#8599;</span></a>
           </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
+  </main>
 
-    <footer class="site-footer page-wrap"><a class="wordmark" href="#home">AB<span>.</span></a><p>Thoughtful data. Useful AI. Solid engineering.</p><span>&copy; <span id="current-year"></span> Anas Ben Amor</span></footer>
-    <a class="back-to-top" href="#home" aria-label="Back to top"><span aria-hidden="true">&#8593;</span></a>
-  </body>
+  <footer class="site-footer page-wrap"><a class="wordmark" href="#home">AB<span>.</span></a>
+    <p>Thoughtful data. Useful AI. Solid engineering.</p><span>&copy; <span id="current-year"></span> Anas Ben
+      Amor</span>
+  </footer>
+  <a class="back-to-top" href="#home" aria-label="Back to top"><span aria-hidden="true">&#8593;</span></a>
+</body>
+
 </html>
