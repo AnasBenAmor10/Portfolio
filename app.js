@@ -51,12 +51,12 @@ document.querySelector("#current-year").textContent = new Date().getFullYear();
 
 const projects = [
   {
-    id: "agentic-oracle-snowflake", category: "ai", type: "END-OF-STUDY PROJECT / DATA & GENAI", title: "Agentic Oracle-to-Snowflake Migration",
+    id: "agentic-oracle-snowflake", category: "data", type: "END-OF-STUDY PROJECT / DATA & GENAI", title: "Agentic Oracle-to-Snowflake Migration",
     question: "Can multiple AI agents help move data workloads from Oracle to Snowflake?",
     summary: "An end-of-study project exploring agentic automation for migration, transformation, and analytics preparation.",
     overview: "This project focuses on automating the migration of data workloads from Oracle to Snowflake. A multi-agent approach supports migration tasks, generates transformation logic, and prepares transformed data for analytics.",
     workflow: ["Analyze Oracle source structures and migration requirements.", "Coordinate multiple agents across migration tasks.", "Generate Snowflake-oriented data transformation logic.", "Prepare transformed outputs for analytics use."],
-    stack: ["Oracle", "Snowflake", "Multi-agent AI", "Data transformation", "Analytics"],
+    stack: ["Oracle", "Snowflake","Spark","Langgraph" ,"Multi-agent AI", "Data transformation", "Analytics"],
     source: "Project summary based on the CV and project description."
   },
   {
@@ -70,7 +70,7 @@ const projects = [
     repository: "https://github.com/AnasBenAmor10/Ambulance-ER-PreArrival-Sync-Powered-by-LLM"
   },
   {
-    id: "air-quality", category: "ai", type: "AI / CLOUD DATA", title: "Air Quality Monitoring & Prediction",
+    id: "air-quality", category: "data", type: "AI / CLOUD DATA", title: "Air Quality Monitoring & Prediction",
     question: "Can a live data stream explain tomorrow's air quality?",
     summary: "Stream air-quality data into dashboards, forecasts, and generated reports.",
     image: "img/Projects/project6.png", imageAlt: "Air-quality data platform architecture", imageCaption: "Cloud ingestion, analytics, visualization, and prediction components.",
@@ -116,7 +116,7 @@ const projects = [
     image: "img/Projects/project1.png", imageAlt: "Real-time flight data pipeline architecture", imageCaption: "AirLabs ingestion, stream processing, and delivery workflow.",
     overview: "A real-time data pipeline project centered on flight and airport-density information from AirLabs, preparing external API data for downstream processing and analysis.",
     workflow: ["Request live air-traffic and airport-density data from AirLabs.", "Process incoming records in a repeatable pipeline.", "Prepare the data for downstream analysis and use."],
-    stack: ["Python", "AirLabs API", "Data pipelines"],
+    stack: ["Kafka", "Spark","Docker","Github Action", "Azure", "ElasticSearch","AirLabs API", "Data pipelines"],
     repository: "https://github.com/AnasBenAmor10/Real-Time-flight-into-data-pipeline"
   },
   {
